@@ -37,16 +37,21 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding:10px;
 }
 
 .project-front {
     background-color: #f5f5f5;
+    padding:10px;
 }
 
 .project-back {
     background-color: #3498db;
     color: #fff;
     transform: rotateX(180deg);
+}
+h2 a {
+    color: #fff;
 }
 .card-image {
     max-width: 70%;
