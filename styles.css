@@ -44,9 +44,10 @@ body {
 }
 
 .project-back {
-    background-color: #3498db;
+    
     color: #fff;
     transform: rotateX(180deg);
+    transition: background-color 0.6s ease;
 }
 h2 a {
     color: #fff;
@@ -69,4 +70,12 @@ h2 a {
 }
 .wrap h2 {
     text-align: center;
+}
+
+.project-card:hover .project-front {
+    background-color: #f5f5f5;
+}
+
+.project-card:hover .project-back {
+    background-color: #3498db;
 }
