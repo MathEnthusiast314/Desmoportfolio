@@ -8,25 +8,77 @@
 </head>
 <body>
 
-    <div class="project-grid">
-        <div class="project-card">
-            <div class="card-inner">
-                <div class="project-front">
-                    <img src="thumb/a2tpnq0z7s.png" alt="Project 1 Thumbnail" class="card-image">
-                    <h2>Simplex method for linear programming</h2>
-                    <span class="project-preview">Wed, 12 Jul 2023</span>
-                </div>
-                <div class="project-back">
-                    <h2><a href="https://www.desmos.com/calculator/a2tpnq0z7s" target="_blank">Simplex method for linear programming</a></h2>
-                    <p>Description of Project 1</p>
-                </div>
-            </div>
-        </div>
-
-
-       
-
+    <div class="project-grid" id="projectGrid">
     </div>
-
+    
+    <script>
+        const projects = [
+            {
+                thumbnail: 'thumb/a2tpnq0z7s.png',
+                name: 'Simplex method for linear programming',
+                date: 'Wed, 12 Jul 2023',
+                description: 'Description of Project 1',
+                link: 'https://www.desmos.com/calculator/a2tpnq0z7s',
+            },
+            {
+                thumbnail: 'thumb/g3ptfr8zlt.png',
+                name: 'Cayley Graph',
+                date: 'Sun, 21 May 2023',
+                description: 'Description of Project 2',
+                link: 'https://www.desmos.com/calculator/g3ptfr8zlt',
+            },
+            {
+                thumbnail: 'thumb/vr8jhfngmq.png',
+                name: 'Complex Power of a Matrix',
+                date: 'Sat, 10 Sep 2022',
+                description: 'Description of Project 3',
+                link: 'https://www.desmos.com/calculator/vr8jhfngmq',
+            }
+        ];
+    
+        const projectGrid = document.getElementById('projectGrid');
+    
+        function createProjectCard(project) {
+            const card = document.createElement('div');
+            card.className = 'project-card';
+    
+            const cardInner = document.createElement('div');
+            cardInner.className = 'card-inner';
+    
+            // Project Front
+            const projectFront = `
+                <div class="project-front">
+                    <div class="wrap">
+                    <img src="${project.thumbnail}" alt="${project.name} Thumbnail" class="card-image">
+                    
+                        <h2>${project.name}</h2>
+                        <span class="project-preview">${project.date}</span>
+                    </div>
+                </div>
+            `;
+    
+            // Project Back
+            const projectBack = `
+                <div class="project-back">
+                    <div class="wrap">
+                        <h2><a href="${project.link}" target="_blank">${project.name}</a></h2>
+                        <p>${project.description}</p>
+                    </div>
+                </div>
+            `;
+    
+            cardInner.innerHTML = projectFront + projectBack;
+            card.appendChild(cardInner);
+    
+            return card;
+        }
+    
+        // Dynamically creating project cards and appending them to the project grid
+        projects.forEach((project) => {
+            const projectCard = createProjectCard(project);
+            projectGrid.appendChild(projectCard);
+        });
+    </script>
+    
 </body>
 </html>
