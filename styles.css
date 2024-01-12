@@ -47,7 +47,7 @@ body {
     
     color: #fff;
     transform: rotateX(180deg);
-    transition: background-color 0.6s ease;
+    transition: background-color 1s ease;
 }
 h2 a {
     color: #fff;
