@@ -79,3 +79,13 @@ h2 a {
 .project-card:hover .project-back {
     background-color: #3498db;
 }
+@media (prefers-reduced-motion: reduce) {
+    .card-inner,
+    .project-back {
+        transition: none !important;
+    }
+}
+
+body {
+    text-align: center;
+}

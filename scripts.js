@@ -331,6 +331,13 @@ const projects = [
         link: 'https://www.desmos.com/calculator/yug702dm3y',
     },
     {
+        thumbnail: 'thumb/y2nggrdjpi.png',
+        name: 'Intersection between a Cone and a Plane',
+        date: 'Wed, 21 Jul 2021',
+        description: 'Finding a basis in the plane and doing vector math',
+        link: 'https://www.desmos.com/calculator/y2nggrdjpi',
+    },
+    {
         thumbnail: 'thumb/w5unoezfbx.png',
         name: 'Funny Fractions and Ford Circles',
         date: 'Mon, 19 Jul 2021',
@@ -561,6 +568,48 @@ const projects = [
         date: 'Sun, 08 Dec 2019',
         description: '3d Terrains with CounterPlot and Angle of Elevation and Depression based on where you stand. Adapted from a "3D Landscape" template.' ,
         link: 'https://www.desmos.com/calculator/lcr2d9zu6f',
+    },
+    {
+        thumbnail: 'thumb/wrdrts9sdv.png',
+        name: 'Convex and Concave Lenses',
+        date: 'Thu, 21 Mar 2019',
+        description: 'Ray diagram to find the image given the object',
+        link: 'https://www.desmos.com/calculator/wrdrts9sdv',
+    },
+    {
+        thumbnail: 'thumb/spirograph.png',
+        name: '3D Spirograph!',
+        date: 'Wed, 16 Jan 2019',
+        description: 'Inspired by the spirograph toy I used to play with as a kid.',
+        link: 'https://www.desmos.com/calculator/spirograph',
+    },
+    {
+        thumbnail: 'thumb/5z2lvw7lqi.png',
+        name: 'Volume using Disc Method rotation',
+        date: 'Thu, 17 Jan 2019',
+        description: 'Visualizing the integral disc method around a vertical line',
+        link: 'https://www.desmos.com/calculator/5z2lvw7lqi',
+    },
+    {
+        thumbnail: 'thumb/aagshxl1mg.png',
+        name: 'Logistic Function',
+        date: 'Sat, 12 Jan 2019',
+        description: 'Growth Model with a differential equation solution and comparing it with a discrete euler method approximation',
+        link: 'https://www.desmos.com/calculator/aagshxl1mg',
+    },
+    {
+        thumbnail: 'thumb/apluiezukx.png',
+        name: 'Magic Square Generator',
+        date: 'Thu, 10 Jan 2019',
+        description: 'Writing numbers diagonally and displacing the position by 1 whenever there\'s a roadblock produces a magic square',
+        link: 'https://www.desmos.com/calculator/apluiezukx',
+    },
+    {
+        thumbnail: 'thumb/ai9rgzajju.png',
+        name: 'Right Bound Riemann Sum',
+        date: 'Wed, 26 Dec 2018',
+        description: 'Description of Project',
+        link: 'https://www.desmos.com/calculator/ai9rgzajju',
     }
 ];
 
