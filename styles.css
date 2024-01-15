@@ -26,6 +26,9 @@ body {
 .project-card:hover .card-inner {
     transform: rotateX(180deg);
 }
+.project-card.active .card-inner {
+    transform: rotateX(0deg);
+}
 
 .project-front,
 .project-back {

@@ -645,6 +645,15 @@ function createProjectCard(project) {
     `;
 
     cardInner.innerHTML = projectFront + projectBack;
+    card.onclick = function() {
+        card.classList.toggle('active');
+    };
+    
+    card.addEventListener('mouseenter', function() {
+        if (card.classList.contains('active')) {
+            card.classList.remove('active');
+        }
+    });
     card.appendChild(cardInner);
 
     return card;
