@@ -510,7 +510,7 @@ const projects = [
         thumbnail: 'thumb/udxuawengf.png',
         name: 'Gears!!!',
         date: 'Wed, 15 Jul 2020',
-        description: 'This was a birthday gift for my dad. Involved careful creation joining of the gears.',
+        description: 'This was a birthday gift for my dad. Involved careful joining of the gears.',
         link: 'https://www.desmos.com/calculator/udxuawengf',
     },
     {
@@ -645,13 +645,19 @@ function createProjectCard(project) {
     `;
 
     cardInner.innerHTML = projectFront + projectBack;
+
+    let isTouchDevice = 'ontouchstart' in document.documentElement;
     card.onclick = function() {
         card.classList.toggle('active');
     };
-    
     card.addEventListener('mouseenter', function() {
+        if (!card.classList.contains('active')&&!isTouchDevice) {
+            card.classList.toggle('active');
+        }
+    });
+    card.addEventListener('mouseleave', function() {
         if (card.classList.contains('active')) {
-            card.classList.remove('active');
+            card.classList.toggle('active');
         }
     });
     card.appendChild(cardInner);
