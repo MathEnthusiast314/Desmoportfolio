@@ -104,6 +104,7 @@ const projects = [
         date: 'Sat, 29 Jan 2022',
         description: 'Finalist of Global Art Contest 2021!',
         link: 'https://www.desmos.com/calculator/tsetnoc021',
+        additional: 'View: <a href="https://www.desmos.com/art-2021#17" target="_blank">Click</a>'
     },
     {
         thumbnail: 'thumb/hdflvldthg.png',
@@ -670,3 +671,29 @@ projects.forEach((project) => {
     const projectCard = createProjectCard(project);
     projectGrid.appendChild(projectCard);
 });
+//
+const body = document.body;
+function toggleLightMode() {
+    const projectFronts = document.querySelectorAll('.project-front');
+    const activeProjectFronts = document.querySelectorAll('.project-card.active .project-front');
+
+    body.classList.toggle('light-mode', !body.classList.contains('light-mode'));
+    projectFronts.forEach((projectFront) => {
+        projectFront.style.backgroundColor = body.classList.contains('light-mode') ? '#f5f5f5' : '#222222';
+    });
+
+    activeProjectFronts.forEach((activeProjectFront) => {
+        activeProjectFront.style.backgroundColor = body.classList.contains('light-mode') ? '#f5f5f5' : '#222222';
+    });
+
+    body.style.backgroundColor = body.classList.contains('light-mode') ? '#fff' : '#121212';
+    body.style.color = body.classList.contains('light-mode') ? '#000' : '#fff';
+    lightModeToggleBtn.classList.toggle('sun-icon', body.classList.contains('light-mode'));
+    lightModeToggleBtn.classList.toggle('moon-icon',!body.classList.contains('light-mode'));
+}
+
+const lightModeToggleBtn = document.getElementById('lightModeToggleBtn');
+lightModeToggleBtn.style.display = 'block';
+lightModeToggleBtn.classList.toggle('moon-icon',true);
+lightModeToggleBtn.addEventListener('click', toggleLightMode);
+
